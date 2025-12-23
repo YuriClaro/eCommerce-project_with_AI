@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Header } from "../../components/Header.jsx";
-import { ProductsGrid } from "./ProductsGrid.jsx";
+import { ProductsGrid } from "./ProductsGrid.jsx"
 import "./HomePage.css";
 
 export function HomePage({cart, loadCart}) {
