@@ -11,7 +11,7 @@ function ChatMessage({ message, sender, time }) {
             : 'chat-message-robot'
         }>
             {sender === 'robot' && (
-                <img src={RobotProfileImage} className="chat-message-profile"/>
+                <img src={RobotProfileImage} className="chat-message-profile-robot"/>
             )}
             <div className="chat-message-text">
             {message}
