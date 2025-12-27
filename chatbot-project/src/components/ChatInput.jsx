@@ -1,16 +1,17 @@
 import dayjs from 'dayjs'
 import { useState } from 'react'
-import { Chatbot } from 'supersimpledev'
+import { getAIResponse } from '../services/aiService.js'
 import './ChatInput.css'
 
 function ChatInput({ chatMessages, setChatMessages }) {
   const [inputText, setInputText] = useState("");
+  const [loading, setLoading] = useState(false);
   
   function saveInputText(event) {
     setInputText(event.target.value);
   }
 
-  function sendMessage() {
+  async function sendMessage() {
     if (inputText.trim() === "") return;
 
     const newChatMessages = [ 
@@ -24,8 +25,9 @@ function ChatInput({ chatMessages, setChatMessages }) {
     ]
 
     setChatMessages(newChatMessages);
+    setLoading(true);
 
-    const response = Chatbot.getResponse(inputText);
+    const response = await getAIResponse(inputText);
     setChatMessages([ 
       ...newChatMessages,
       {
@@ -37,6 +39,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
     ]);
 
     setInputText("");
+    setLoading(false);
   }
 
   function handleKeyPress(event) {
@@ -59,8 +62,9 @@ function ChatInput({ chatMessages, setChatMessages }) {
       <button 
         onClick={sendMessage}
         className="send-button"
+        disabled={loading}
         >
-          Send
+          {loading ? 'Sending...' : 'Send'}
       </button>
     </div>
   );
