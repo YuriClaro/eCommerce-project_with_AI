@@ -11,6 +11,8 @@ function ChatInput({ chatMessages, setChatMessages }) {
   }
 
   function sendMessage() {
+    if (inputText.trim() === "") return;
+
     const newChatMessages = [ 
       ...chatMessages,
       {
@@ -36,6 +38,13 @@ function ChatInput({ chatMessages, setChatMessages }) {
 
     setInputText("");
   }
+
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      sendMessage();
+    }
+  }
   
   return (
     <div className="chat-input-container">
@@ -43,6 +52,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
         placeholder="Send a message to Chatbot" 
         size="30"
         onChange={saveInputText}
+        onKeyPress={handleKeyPress}
         value={inputText}
         className="chat-input"
       />
