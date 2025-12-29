@@ -3,7 +3,7 @@ import { HomePage } from './pages/home/HomePage'
 import { Routes, Route } from 'react-router'
 import { OrdersPage } from './pages/orders/OrdersPage'
 import { CheckoutPage } from './pages/chekout/CheckoutPage'
-import { TrackingPage } from './pages/TrackingPage'
+import { TrackingPage } from './pages/tracking/TrackingPage'
 import axios from 'axios'
 import './App.css'
 
