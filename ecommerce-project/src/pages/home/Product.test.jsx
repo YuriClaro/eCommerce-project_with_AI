@@ -13,7 +13,7 @@ describe('Product component', () => {
     beforeEach(() => {
         product = {        
             id: "e43688ce-6aa0-4b85-b27f-e1d07eb678c6",
-            image: "/images/products/athletic-cotton-socks-6-pairs.jpg",
+            image: "/images/products/1-bico-bosch-65lbs.png",
             name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
             rating: {
                 stars: 4.5,
@@ -40,7 +40,7 @@ describe('Product component', () => {
 
         expect(
             screen.getByTestId('product-image')
-        ).toHaveAttribute('src', '/images/products/athletic-cotton-socks-6-pairs.jpg');
+        ).toHaveAttribute('src', '/images/products/1-bico-bosch-65lbs.png');
 
         expect(
             screen.getByTestId('product-rating-stars-image')
@@ -54,7 +54,7 @@ describe('Product component', () => {
     it('adds a product to the cart', async () => {
         const product = {        
             id: "e43688ce-6aa0-4b85-b27f-e1d07eb678c6",
-            image: "/images/products/athletic-cotton-socks-6-pairs.jpg",
+            image: "/images/products/1-bico-bosch-65lbs.png",
             name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
             rating: {
                 stars: 4.5,

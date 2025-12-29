@@ -5,13 +5,13 @@ export const defaultOrders = [
     totalCostCents: 3506,
     products: [
       {
-        productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+        productId: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
         quantity: 1,
         estimatedDeliveryTimeMs: 1723716000000
       },
       {
         productId: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-        quantity: 2,
+        quantity: 1,
         estimatedDeliveryTimeMs: 1723456800000
       }
     ]

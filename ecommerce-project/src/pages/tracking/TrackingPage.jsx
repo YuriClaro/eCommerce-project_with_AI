@@ -24,7 +24,7 @@ export function TrackingPage() {
 
           <img
             className="product-image"
-            src="images/products/athletic-cotton-socks-6-pairs.jpg"
+            src="images/products/1-bico-bosch-65lbs.png"
           />
 
           <div className="progress-labels-container">
