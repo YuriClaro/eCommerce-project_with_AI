@@ -111,7 +111,7 @@ export const defaultProducts = [
   },
   {
     "id": "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
-    "image": "images/products/bomba-combustivel-12bar-mercedez.png",
+    "image": "images/products/bomba-dinamica-12bar-gti.png",
     "name": "High Pressure Fuel Pump 12 Bar",
     "rating": {
       "stars": 4.5,

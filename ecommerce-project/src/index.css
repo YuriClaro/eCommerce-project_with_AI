@@ -1,12 +1,9 @@
 body {
   font-family: Roboto, Arial;
   color: rgb(33, 33, 33);
-  /* The <body> element has a default margin of 8px
-     on all sides. This removes the default margins. */
   margin: 0;
 }
 
-/* Remove the default margins of <p> elements. */
 p {
   margin: 0;
 }
@@ -26,7 +23,7 @@ input, select, button {
 
 .button-primary {
   color: rgb(255, 255, 255);
-  background-color: rgb(25, 135, 84);
+  background: linear-gradient(to bottom, rgb(27, 51, 235), rgb(43, 43, 140));
   border: 1px solid transparent;
   border-radius: 5px;
   cursor: pointer;
@@ -34,12 +31,12 @@ input, select, button {
 }
 
 .button-primary:hover {
-  background-color: rgba(25, 135, 84, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   border: 1px solid transparent;
 }
 
 .button-primary:active {
-  background: rgba(25, 135, 84, 0.5);
+  background: rgba(27, 51, 235, 0.5);
   border-color: transparent;
   box-shadow: none;
 }
@@ -62,11 +59,6 @@ input, select, button {
   box-shadow: none;
 }
 
-/* These styles will limit text to 2 lines. Anything
-   beyond 2 lines will be replaced with "..."
-   You can find this code by using an A.I. tool or by
-   searching in Google.
-   https://css-tricks.com/almanac/properties/l/line-clamp/ */
 .limit-text-to-2-lines {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -75,7 +67,7 @@ input, select, button {
 }
 
 .link-primary {
-  color: rgb(25, 135, 84);
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -87,7 +79,6 @@ input, select, button {
   opacity: 0.5;
 }
 
-/* Styles for dropdown selectors. */
 select {
   color: rgb(33, 33, 33);
   background-color: rgb(255, 255, 255);
@@ -101,5 +92,5 @@ select {
 
 select:focus,
 input:focus {
-  outline: 2px solid rgb(25, 135, 84);
+  outline: 2px solid rgb(23, 23, 132);
 }
