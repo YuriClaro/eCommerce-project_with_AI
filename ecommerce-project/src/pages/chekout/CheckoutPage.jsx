@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { OrderSummary } from "./OrderSummary";
 import { PaymentSummary } from "./PaymentSummary";
-import axios from "axios";
+import apiClient from "../../utils/apiClient";
+import { getImageUrl } from "../../utils/imageUrl";
 import "./checkout-header.css";
 import "./CheckoutPage.css";
 
@@ -11,10 +12,10 @@ export function CheckoutPage({ cart, loadCart }) {
 
   useEffect(() => {
     const fetchCheckoutData = async () => {
-      let response = await axios.get("/api/delivery-options?expand=estimatedDeliveryTime");
+      let response = await apiClient.get("/api/delivery-options?expand=estimatedDeliveryTime");
       setDeliveryOptions(response.data);
 
-      response = await axios.get("/api/payment-summary");
+      response = await apiClient.get("/api/payment-summary");
       setPaymentSummary(response.data);
     };
 
@@ -28,8 +29,8 @@ export function CheckoutPage({ cart, loadCart }) {
         <div className="header-content">
           <div className="checkout-header-left-section">
             <a href="/">
-              <img className="logo" src="/images/logo.png" />
-              <img className="mobile-logo" src="/images/mobile-logo.png" />
+              <img className="logo" src={getImageUrl("/images/logo.png")} />
+              <img className="mobile-logo" src={getImageUrl("/images/mobile-logo.png")} />
             </a>
           </div>
 
@@ -42,7 +43,7 @@ export function CheckoutPage({ cart, loadCart }) {
           </div>
 
           <div className="checkout-header-right-section">
-            <img src="/images/icons/checkout-lock-icon.png" />
+            <img src={getImageUrl("/images/icons/checkout-lock-icon.png")} />
           </div>
         </div>
       </div>

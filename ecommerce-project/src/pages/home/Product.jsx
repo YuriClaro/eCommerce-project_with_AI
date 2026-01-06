@@ -1,5 +1,6 @@
 import apiClient from "../../utils/apiClient";
 import { formatMoney } from "../../utils/money";
+import { getImageUrl } from "../../utils/imageUrl";
 import { useState } from "react";
 
 export function Product({ product, loadCart }) {
@@ -21,7 +22,7 @@ export function Product({ product, loadCart }) {
   return (
     <div className="product-container" data-testid="product-container">
       <div className="product-image-container">
-        <img className="product-image" src={product.image} alt={product.name} data-testid="product-image" />
+        <img className="product-image" src={getImageUrl(product.image)} alt={product.name} data-testid="product-image" />
       </div>
 
       <div className="product-name limit-text-to-2-lines">{product.name}</div>
@@ -30,7 +31,7 @@ export function Product({ product, loadCart }) {
         <img
           className="product-rating-stars"
           data-testid="product-rating-stars-image"
-          src={`/images/ratings/rating-${product.rating.stars * 10}.png`}
+          src={getImageUrl(`/images/ratings/rating-${product.rating.stars * 10}.png`)}
         />
         <div className="product-rating-count link-primary">
           {product.rating.count}
@@ -57,7 +58,7 @@ export function Product({ product, loadCart }) {
       <div className="product-spacer"></div>
 
       <div className="added-to-cart">
-        <img src="/images/icons/checkmark.png" />
+        <img src={getImageUrl("/images/icons/checkmark.png")} />
         Added
       </div>
 
