@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import axios from "axios";
+import apiClient from "../../utils/apiClient";
 import { formatMoney } from "../../utils/money";
 import { DeliveryOptions } from "./DeliveryOptions";
 
@@ -15,12 +15,12 @@ export function OrderSummary({ cart, deliveryOptions, loadCart}) {
           );
 
           const updateCartItem = async () => {
-            await axios.put(`/api/cart-items/${cartItem.productId}`);
+            await apiClient.put(`/api/cart-items/${cartItem.productId}`);
             await loadCart();
           }
 
           const deleteCartItem = async () => {
-            await axios.delete(`/api/cart-items/${cartItem.productId}`);
+            await apiClient.delete(`/api/cart-items/${cartItem.productId}`);
             await loadCart();
           }
 

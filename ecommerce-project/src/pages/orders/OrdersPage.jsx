@@ -1,4 +1,4 @@
-import axios from "axios";
+import apiClient from "../../utils/apiClient";
 import dayjs from "dayjs";
 import { useState, useEffect, Fragment } from "react";
 import { Header } from "../../components/Header.jsx";
@@ -9,7 +9,7 @@ export function OrdersPage({ cart }) {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/orders?expand=products").then((response) => {
+    apiClient.get("/api/orders?expand=products").then((response) => {
       setOrders(response.data);
     });
   }, []);
