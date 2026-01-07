@@ -72,14 +72,23 @@ The frontend will run on `http://localhost:5173` (Vite)
 The backend provides the following endpoints:
 
 ``GET /api/products`` - Get all products
+
 ``POST /api/cart-items`` - Add item to cart
+
 ``GET /api/cart-items`` - Get cart items
+
 ``PUT /api/cart-items/:id`` - Update cart item
+
 ``DELETE /api/cart-items/:id`` - Remove cart item
+
 ``GET /api/delivery-options`` - Get delivery options
+
 ``GET /api/orders`` - Get all orders
+
 ``POST /api/orders`` - Create new order
+
 ``GET /api/payment-summary`` - Get payment summary
+
 ``GET /api/reset`` - Reset to default data
 
 ## 🛠️ Available Scripts
@@ -113,19 +122,31 @@ NODE_ENV=development
 ✅ Payment summary
 
 ## 🤝 Technologies Used
-Backend
-Express.js
-Sequelize ORM
-SQLite/SQL.js
-CORS
-Nodemon (development)
-Frontend
-React 19
-React Router
-Vite
-Axios
-Day.js
-Vitest (testing)
+## Backend
+
+- Express.js
+
+- Sequelize ORM
+
+- SQLite/SQL.js
+
+- CORS
+
+- Nodemon (development)
+
+## Frontend
+
+- React 19
+
+- React Router
+
+- Vite
+
+- Axios
+
+- Day.js
+
+- Vitest (testing)
 
 ## 📚 Additional Documentation
 Backend Documentation
