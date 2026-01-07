@@ -2,6 +2,14 @@
 
 A full-stack e-commerce project with React (frontend) and Node.js/Express (backend).
 
+## 🌐 Deployment
+
+**Frontend:** Deployed on [Vercel](https://vercel.com)
+
+**Backend:** Deployed on [Render](https://render.com)
+
+⚠️ **Important:** The backend APIs may take approximately 50 seconds to respond on first access due to Render's free tier cold start behavior. Subsequent requests will be faster.
+
 ## 📋 Prerequisites
 
 - **Node.js** version 22 or higher
